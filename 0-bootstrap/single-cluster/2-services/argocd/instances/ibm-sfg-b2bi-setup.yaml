@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ibm-sfg-b2bi-nonprod-setup
+  name: ibm-sfg-b2bi-setup
   annotations:
     argocd.argoproj.io/sync-wave: "270"
   labels:
@@ -16,7 +16,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: services
   source:
-    path: instances/ibm-sfg-b2bi-nonprod-setup
+    path: instances/ibm-sfg-b2bi-setup
   syncPolicy:
     automated:
       prune: true
